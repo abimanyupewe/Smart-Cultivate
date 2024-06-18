@@ -1,8 +1,9 @@
+import 'package:farmapp/pages/home.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import './pages/onboarding.dart';
-import './pages/login.dart';
-import './widgets/splashscreen.dart';
+// import './pages/onboarding.dart';
+// import './pages/login.dart';
+// import './widgets/splashscreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
             debugShowCheckedModeBanner: false,
-            home: Login(),
+            home: HomePage(),
           );
     // return FutureBuilder(
     //   future: Future.delayed(
