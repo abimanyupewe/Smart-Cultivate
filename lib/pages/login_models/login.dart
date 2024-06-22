@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'home.dart';
+import '../home_models/home.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'forget_password.dart';
 import 'register.dart';
