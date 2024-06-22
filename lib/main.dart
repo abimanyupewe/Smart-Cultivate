@@ -1,4 +1,4 @@
-import 'package:farmapp/pages/home.dart';
+import 'package:farmapp/pages/home_models/home.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 // import './pages/onboarding.dart';

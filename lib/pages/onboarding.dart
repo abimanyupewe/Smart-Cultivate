@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'login.dart';
+import 'login_models/login.dart';
 
 class Onboarding extends StatelessWidget {
   const Onboarding({super.key});

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import '../widgets/vegetable_items.dart';
+import '../../widgets/vegetable_items.dart';
+import '../home_models/see_all_vegetables/see_all.dart';
+import '../shop_models/shop.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -78,7 +81,7 @@ class HomePage extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        print("See All >");
+                        Get.to(SeeAll());
                       },
                       child: Text(
                         "See All >",
@@ -148,7 +151,7 @@ class HomePage extends StatelessWidget {
             GButton(
               icon: Icons.shopping_basket,
               onPressed: () {
-                print("Search");
+                Get.to(Shop());
               },
               text: 'Shop',
             ),
