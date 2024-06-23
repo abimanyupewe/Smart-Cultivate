@@ -13,24 +13,24 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // return GetMaterialApp(
-    //         debugShowCheckedModeBanner: false,
-    //         home: HomePage(),
-    //       );
-    return FutureBuilder(
-      future: Future.delayed(
-        Duration(seconds: 3),
-      ),
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return SplashScreen();
-        } else {
-          return GetMaterialApp(
+    return GetMaterialApp(
             debugShowCheckedModeBanner: false,
-            home: Onboarding(),
+            home: HomePage(),
           );
-        }
-      },
-    );
+    // return FutureBuilder(
+    //   future: Future.delayed(
+    //     Duration(seconds: 3),
+    //   ),
+    //   builder: (context, snapshot) {
+    //     if (snapshot.connectionState == ConnectionState.waiting) {
+    //       return SplashScreen();
+    //     } else {
+    //       return GetMaterialApp(
+    //         debugShowCheckedModeBanner: false,
+    //         home: Onboarding(),
+    //       );
+    //     }
+    //   },
+    // );
   }
 }
