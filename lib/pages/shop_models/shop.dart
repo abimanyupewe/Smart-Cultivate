@@ -3,6 +3,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:get/get.dart';
 import '../home_models/home.dart';
+import 'package:lottie/lottie.dart';
+import '../../widgets/shop_items.dart';
+import '../../widgets/category_items.dart';
 
 class Shop extends StatelessWidget {
   const Shop({super.key});
@@ -14,13 +17,100 @@ class Shop extends StatelessWidget {
         title: Text(
           "Shop",
           style: GoogleFonts.poppins(
-            fontSize: 20,
-            fontWeight: FontWeight.w500,
-          ),
+              fontSize: 20, fontWeight: FontWeight.w500, color: Colors.white),
+        ),
+        backgroundColor: Color(0xFFA7E2AD),
+        elevation: 0,
+        centerTitle: true,
+        leading: IconButton(
+          onPressed: () {
+            Get.to(HomePage());
+          },
+          icon: Icon(Icons.arrow_back),
+          color: Colors.white,
         ),
       ),
-      body: Center(
-        child: Text("Shop"),
+      body: Column(
+        children: [
+          Stack(
+            children: [
+              Container(
+                width: 400,
+                height: 260,
+                decoration: BoxDecoration(
+                  color: Color(0xFFA7E2AD),
+                ),
+              ),
+              Column(
+                children: [
+                  SizedBox(
+                    width: 200,
+                    child: Lottie.asset("assets/lotties/sale.json"),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(right: 10, left: 10),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        fillColor: Color(0xFFFEAE6F),
+                        filled: true,
+                        hintText: 'Search...',
+                        hintStyle: GoogleFonts.poppins(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.white,
+                        ),
+                        prefixIcon: Icon(Icons.search),
+                        prefixIconColor: Colors.white,
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 10, top: 10),
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 50,
+                          height: 30,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            border: Border.all(width: 1, color: Colors.black),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Center(
+                            child: Text(
+                              "All",
+                              style: GoogleFonts.poppins(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Expanded(
+                          child: Category_Items(),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+          Expanded(
+            child: ListView(
+              children: [
+                Shop_Items(),
+              ],
+            ),
+          ),
+        ],
       ),
       bottomNavigationBar: SizedBox(
         width: double.infinity,
@@ -29,7 +119,7 @@ class Shop extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           selectedIndex: 2,
           // backgroundColor: Colors.amber,
-          hoverColor: Colors.black54, // tab button hover color
+          hoverColor: Colors.black54,
           haptic: false, // haptic feedback
           tabBorderRadius: 20, // tab button border radius
           tabMargin: EdgeInsets.symmetric(horizontal: 5, vertical: 5),

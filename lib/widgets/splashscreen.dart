@@ -11,9 +11,9 @@ class SplashScreen extends StatelessWidget {
         backgroundColor: Color(0xFf74512D),
         body: Center(
           child: Container(
-            width: 200,
-            height: 200,
-            child: Image.asset("assets/images/Logo SmartCultivate.png"),
+            width: 500,
+            height: 500,
+            child: Image.asset("assets/images/LOGO app 1.png"),
           ),
         ),
       ),
