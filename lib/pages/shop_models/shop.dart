@@ -63,7 +63,7 @@ class Shop extends StatelessWidget {
                         prefixIconColor: Colors.white,
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
-                        ),hgjhgjh
+                        ),
                       ),
                       style: GoogleFonts.poppins(
                         fontSize: 16,
